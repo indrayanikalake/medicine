@@ -1,0 +1,14 @@
+.cart{
+  background: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+    z-index: 21;
+
+    border-bottom: 3px solid rgb(246, 241, 241);
+    border-radius: 10px;
+  
+}
+
