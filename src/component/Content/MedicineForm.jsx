@@ -6,6 +6,7 @@ const MedicineForm = ({addMedicine}) => {
     const nameRef=useRef();
     const desRef=useRef();
     const priceRef=useRef();
+    
  
 
 
@@ -14,12 +15,14 @@ const MedicineForm = ({addMedicine}) => {
      const nam=nameRef.current.value;
       const des=desRef.current.value;
       const price=priceRef.current.value;
-     
+    
 
         const medicine={
            nam,
            des,
            price
+          
+         
          
         }
         
@@ -28,12 +31,13 @@ const MedicineForm = ({addMedicine}) => {
         nameRef.current.value='';
         desRef.current.value='';
         priceRef.current.value='';
+        
     
     }
   return (
     <div>
       <form onSubmit={formHandler}>
-        <div>Medicine Name:
+        <div>Candy Name:
             <input
             type='text'
             ref={nameRef}
@@ -59,7 +63,7 @@ const MedicineForm = ({addMedicine}) => {
             />
 
         </div>
-        
+       
         <button type='submit' className='custom__button'>Add To Cart</button>
       </form>
     </div>

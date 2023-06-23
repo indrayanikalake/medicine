@@ -11,7 +11,7 @@ const Cart = ({onClose}) => {
     {cartItems.map((item,index)=>(
         <div key={index}>
             <h3>{item.nam}</h3>
-            <p>Qty:{item.qtotal}</p>
+            <p>Quatity:{item.qty}</p>
             <p>price:{item.price}</p>
             
         </div>
