@@ -2,7 +2,7 @@ import React, {  useRef } from 'react'
 
 
 
-const MedicineForm = ({addMedicine}) => {
+const MedicineForm = ({addMedicine, incrementQuantity}) => {
     const nameRef=useRef();
     const desRef=useRef();
     const priceRef=useRef();
@@ -34,6 +34,11 @@ const MedicineForm = ({addMedicine}) => {
         
     
     }
+
+    const handleButtonClick = (size) => {
+      incrementQuantity(size);
+    };
+
   return (
     <div>
       <form onSubmit={formHandler}>
@@ -62,6 +67,18 @@ const MedicineForm = ({addMedicine}) => {
             required
             />
 
+        </div>
+
+        <div>
+          <button type='button' onClick={() => handleButtonClick('small')}>
+            Small
+          </button>
+          <button type='button' onClick={() => handleButtonClick('medium')}>
+            Medium
+          </button>
+          <button type='button' onClick={() => handleButtonClick('large')}>
+            Large
+          </button>
         </div>
        
         <button type='submit' className='custom__button'>Add To Cart</button>
